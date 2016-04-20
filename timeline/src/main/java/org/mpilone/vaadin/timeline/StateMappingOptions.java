@@ -412,5 +412,10 @@ class StateMappingOptions implements TimelineOptions {
   public TimelineState.FormatLabels getFormatMinorLabels() {
     return getState(false).options.format.minorLabels;
   }
+  
+  @Override
+  public void setHeight(String height) {
+    getState().options.height = height;
+  }
 
 }

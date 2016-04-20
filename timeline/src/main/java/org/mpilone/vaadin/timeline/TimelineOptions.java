@@ -161,6 +161,8 @@ public interface TimelineOptions {
   public void setMultiselect(boolean multiselect);
 
   public boolean isMultiselect();
+  
+  public void setHeight(String height);
 
   /**
    * The orientation (i.e. location) of the time axis on the timeline.
