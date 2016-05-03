@@ -415,7 +415,7 @@ public class Timeline extends AbstractJavaScriptComponent implements
    * Sets up the items to be sent to the client and makes the RPC call to send
    * them.
    */
-  private void sendItemsToClient() {
+  protected void sendItemsToClient() {
     items = getItemProvider().getItems(window.getStart(), window.getEnd());
     items = items == null ? new ArrayList<TimelineItem>() : items;
 
@@ -771,6 +771,15 @@ public class Timeline extends AbstractJavaScriptComponent implements
 
       fireEvent(new ContextMenuEvent(Timeline.this, itemId, eventProps));
     }
+  }
+
+  public List<TimelineItem> getItems() {
+    return items;
+  }
+
+  
+  public void setItems(List<TimelineItem> items) {
+    this.items = items;
   }
 
 }

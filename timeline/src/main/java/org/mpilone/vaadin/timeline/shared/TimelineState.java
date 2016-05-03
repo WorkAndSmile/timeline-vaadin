@@ -79,8 +79,8 @@ public class TimelineState extends JavaScriptComponentState {
     public TimeAxis timeAxis;
     public String type;
     public boolean zoomable;
-    public int zoomMax;
-    public int zoomMin;
+    public long zoomMax;
+    public long zoomMin;
     public String height;
   }
 

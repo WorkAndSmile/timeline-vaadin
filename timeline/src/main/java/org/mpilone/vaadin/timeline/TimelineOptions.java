@@ -150,13 +150,13 @@ public interface TimelineOptions {
 
   public void setType(ItemType type);
 
-  public int getZoomMax();
+  public long getZoomMax();
 
-  public void setZoomMax(int zoomMax);
+  public void setZoomMax(long zoomMax);
 
-  public int getZoomMin();
+  public long getZoomMin();
 
-  public void setZoomMin(int zoomMin);
+  public void setZoomMin(long zoomMin);
 
   public void setMultiselect(boolean multiselect);
 

@@ -332,22 +332,22 @@ class StateMappingOptions implements TimelineOptions {
   }
 
   @Override
-  public int getZoomMax() {
+  public long getZoomMax() {
     return getState(false).options.zoomMax;
   }
 
   @Override
-  public void setZoomMax(int zoomMax) {
+  public void setZoomMax(long zoomMax) {
     getState().options.zoomMax = zoomMax;
   }
 
   @Override
-  public int getZoomMin() {
+  public long getZoomMin() {
     return getState(false).options.zoomMin;
   }
 
   @Override
-  public void setZoomMin(int zoomMin) {
+  public void setZoomMin(long zoomMin) {
     getState().options.zoomMin = zoomMin;
   }
 

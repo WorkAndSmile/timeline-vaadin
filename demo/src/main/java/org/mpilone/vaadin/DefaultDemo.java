@@ -134,8 +134,18 @@ public class DefaultDemo extends VerticalLayout {
         }
 
         timeline.setItemProvider(provider);
+        List<TimelineItem> items = provider.getItems(timeline.getWindow().
+            getStart(),
+            timeline.getWindow().getEnd());
+
+        int index = (int) (Math.random() * items.size());
+        TimelineItem item = items.get(index);
+        timeline.setSelection(Arrays.asList(item.getId()),
+            new TimelineMethodOptions.SetSelection(true, new Animation()));
+      
       }
     });
+    
     controlLayout.addComponent(btn);
 
     btn = new Button("Select Random", new Button.ClickListener() {
@@ -278,8 +288,8 @@ public class DefaultDemo extends VerticalLayout {
       @Override
       public void buttonClick(Button.ClickEvent event) {
         TimelineOptions options = timeline.getOptions();
-        options.setZoomMin(Integer.parseInt(zoomMin.getValue()) * 1000);
-        options.setZoomMax(Integer.parseInt(zoomMax.getValue()) * 1000);
+        options.setZoomMin(Long.parseLong(zoomMin.getValue()) * 1000);
+        options.setZoomMax(Long.parseLong(zoomMax.getValue()) * 1000);
       }
     });
     controlLayout.addComponent(btn);
