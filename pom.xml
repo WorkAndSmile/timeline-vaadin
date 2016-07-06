@@ -58,14 +58,15 @@
       Refer to http://cemerick.com/2010/08/24/hosting-maven-repos-on-github/
     -->
     <repository>
-      <id>mpilone-releases</id>
-      <name>GitHub MVN Repository Releases</name>
-      <url>https://github.com/mpilone/mvn-repo/raw/master/releases</url>
-    </repository>
-    <snapshotRepository>
-      <id>mpilone-snapshots</id>
-      <name>GitHub MVN Repository Snapshots</name>
-      <url>https://github.com/mpilone/mvn-repo/raw/master/snapshots</url>
-    </snapshotRepository>
+		<id>nexus</id>
+		<name>maven-releases</name>
+		<url>http://192.168.0.113:8081/repository/maven-releases/</url>
+	</repository>
+	<!-- use the following if you ARE using a snapshot version. -->
+	<snapshotRepository>
+		<id>nexus</id>
+		<name>maven-snapshots</name>
+		<url>http://192.168.0.113:8081/repository/maven-snapshots/</url>
+	</snapshotRepository>
   </distributionManagement>
 </project>
