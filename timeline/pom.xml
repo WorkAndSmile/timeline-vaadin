@@ -52,13 +52,13 @@
     <repository>
 		<id>nexus</id>
 		<name>maven-releases</name>
-		<url>http://192.168.0.113:8081/repository/maven-releases/</url>
+		<url>http://192.168.0.113:8081/repository/wns-releases/</url>
 	</repository>
 	<!-- use the following if you ARE using a snapshot version. -->
 	<snapshotRepository>
 		<id>nexus</id>
 		<name>maven-snapshots</name>
-		<url>http://192.168.0.113:8081/repository/maven-snapshots/</url>
+		<url>http://192.168.0.113:8081/repository/wns-snapshots/</url>
 	</snapshotRepository>
   </distributionManagement>
 </project>
